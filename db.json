@@ -1,0 +1,33 @@
+{
+  "tasks": [
+    {
+      "taskName": "sample-task",
+      "assignee": "sample-assignee",
+      "completed": false,
+      "id": 1
+    },
+    {
+      "taskName": "vvv",
+      "assignee": "vvv",
+      "completed": false,
+      "id": 2
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
