@@ -1,12 +1,9 @@
 const getTasks = () => {
-    console.log('get tasks is running')
     try {
-        console.log('tried')
         return fetch('/tasks')
     }
     catch (err) {
-        console.log('catch')
-        console.log('error ahhhhhh', err)
+        console.log(err)
         return err
     }
 }
@@ -73,15 +70,10 @@ const addTask = (taskObject, taskNumber) => {
 }
 
 function populateTodos () {
-    console.log('populate is running')
     getTasks()
-        .then(response => {
-            console.log('fetch happened')
-            response.json()
-        })
+        .then(response => response.json())
         .then(json => JSON.parse(JSON.stringify(json)))
         .then(taskArray => {
-            console.log('fetch happened')
             taskArray.forEach((task, index) => {
                 addTask(task, index)
             })
